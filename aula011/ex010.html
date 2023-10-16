@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Velocidade</title>
+
+    <style>
+        input#verif {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Limite de Velocidade : 60km/h</h2>
+
+    Velocidade: <input type="number" name="veloc" id="veloc"> km/h
+    <input type="button" value="Verificar" id="verif" onclick="clicar()">
+    <p id="res">Resultado :</p>
+
+    <script>
+        function clicar(){
+            var vel = document.getElementById('veloc').value
+            var res = document.getElementById('res')
+
+         res.innerHTML = `Sua velocidade foi de ${vel}km/h `
+         if ( vel > 60)  {
+            res.innerHTML += ' <br> Você foi <strong>multado</strong>'
+         } else {
+            res.innerHTML += '<br> Parabéns, continue assim'
+         }
+        }
+
+
+    </script>
+    
+</body>
+</html>

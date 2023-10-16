@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+
+        body, html {
+
+            background-color: cadetblue;
+        }
+        input.campos {
+            width: 50px;
+            background-color: lightgray;
+            border-radius: 8px;
+            border: solid 3px black;
+        }
+
+        input#soma {
+            display: block;
+            margin-left: 1px;
+            margin-top: 5px;
+            
+
+
+        }
+        
+        input#apaga {
+            
+             display: block;
+            margin-top: 4px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>
+        Calculadora teste
+    </h1>
+
+    <h2>
+        Soma
+    </h2>
+
+    <input type="number" name="num1" id="num1" class="campos"> +
+    <input type="number" name="num2" id="num2" class="campos"> =
+    <input type="number" name="res" id="res" class="campos">
+    <input type="button" value="Somar" id="soma" onclick="clicar()">
+    <input type="button" value="Apagar" id="apaga" onclick="apagar()">
+
+    
+    
+    
+    <script>
+        
+
+        function clicar() {
+
+            var n1 = Number(window.document.getElementById('num1').value)
+
+             var n2 = Number(window.document.getElementById('num2').value)
+
+             var s = n1 + n2
+
+             document.getElementById('res').value = s
+
+         }
+
+
+         function apagar() {
+            
+            document.getElementById('num1').value = ''
+            document.getElementById('num2').value = ''
+            document.getElementById('res').value = ''
+
+         }
+    </script>
+    
+</body>
+</html>
